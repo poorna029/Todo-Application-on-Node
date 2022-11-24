@@ -1,0 +1,98 @@
+### 1.1 get api for todos list where status=todo;
+
+get http://localhost:3000/todos/?priority=HIGH 
+
+### 1.2
+get http://localhost:3000/todos/?status=TO%20DO
+
+### 1.3
+get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+### 1.4
+get http://localhost:3000/todos/?search_q=Buy
+
+
+### 1.5
+get http://localhost:3000/todos/?category=WORK&status=DONE
+
+### 1.6
+get http://localhost:3000/todos/?category=WORK
+
+### 1.7
+get http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+### 2 get todo with date 
+get http://localhost:3000/todos/?date=2021-4-4
+
+
+### check all rows
+get http://localhost:3000/todos/
+
+### 3 
+get http://localhost:3000/agenda/?date=1-1-1 
+
+### 4
+post http://localhost:3000/todos/
+Content-Type: application/json
+
+# {
+#  "id": 5,
+#  "todo": "Finalize event theme",
+#  "priority": "HIGH",
+#  "status": "TO DO",
+#  "category": "WORK",
+#  "dueDate": "2021-2-22"
+# }
+{
+ "id": 6,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-0-1"
+}
+
+### 5.1
+put http://localhost:3000/todos/1
+Content-Type:application/json 
+
+{ "status": "DONE" }
+
+### 5.2
+put http://localhost:3000/todos/1
+Content-Type:application/json 
+
+{ "priority": "HIGH" }
+
+### 5.3
+put http://localhost:3000/todos/1
+Content-Type:application/json 
+
+{
+"todo": "Clean the garden"
+}
+
+### 5.4
+put http://localhost:3000/todos/1
+Content-Type:application/json 
+
+{ "category": "LEARNING" }
+
+### 5.5
+put http://localhost:3000/todos/1
+Content-Type:application/json 
+
+{ "dueDate": "2021-12-31" }
+
+
+
+### 6
+delete http://localhost:3000/todos/1
+Content-Type:application/json 
+
+### list of records :
+get http://localhost:3000/todos/
+
+
+
+
